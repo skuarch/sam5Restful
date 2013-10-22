@@ -27,6 +27,7 @@ public class Jumper {
     public String get(String json) {
 
         if (json == null || json.length() < 1 || !json.startsWith("{") || !json.endsWith("}")) {
+            logger.error("incorrect json, json is null or empty");
             return JSONUtil.getJSONErrorAppend("incorrect json");
         }
 
